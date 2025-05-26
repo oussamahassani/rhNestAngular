@@ -10,8 +10,8 @@ export class MailerService {
       host: 'smtp.mailtrap.io',
       port: 2525,
       auth: {
-        user: '<YOUR_USERNAME>',     // Mailtrap username
-        pass: '<YOUR_PASSWORD>',     // Mailtrap password
+        user: '8667d30e9ea8b2',     // Mailtrap username
+        pass: '514c010602723f',     // Mailtrap password
       },
     });
   }
