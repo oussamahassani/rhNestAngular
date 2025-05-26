@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-xl-12">
+    <app-card cardTitle="Liste des demandes" [options]="false" blockClass="table-border-style">
+      
+      <!-- Loading spinner -->
+      <div *ngIf="loading" class="text-center p-5">
+        <div class="spinner-border text-primary">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Code</th>
+              <th>Nom de demandeur</th>
+              <th>Poste</th>
+              <th>Statut</th>
+         
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let demande of demandes; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ demande.code || 'N/A' }}</td>
+              <td>{{ demande.nom || 'N/A' }}</td>
+              <td>{{ demande.poste || 'N/A' }}</td>
+              
+
+              <!-- Statut -->
+             <td>
+                <select [(ngModel)]="demande.status" 
+                  class="form-control form-control-sm" 
+                  (change)="onStatusChange(demande)">
+                  <option value="en attente">En attente</option>
+                  <option value="accepté">Accepté</option>
+                  <option value="refusé">Refusé</option>
+                </select>
+              </td> 
+              
+              
+
+             
+              <!-- Actions -->
+             <!--  <td>
+                <button class="btn btn-sm btn-primary me-2" (click)="editDemande(demande._id)">Modifier</button>
+                <button class="btn btn-sm btn-danger" (click)="deleteDemande(demande._id)">Supprimer</button>
+              </td> -->
+            </tr>
+
+            <!-- Aucune donnée -->
+            <tr *ngIf="!loading && demandes.length === 0">
+              <td colspan="6" class="text-center">Aucune demande trouvée.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+</div>

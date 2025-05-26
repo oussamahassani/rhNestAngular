@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-sm-12">
+<!-- 
+      <app-card cardTitle="Formulaire de création de stagaire" [options]="false"> -->
+    <!-- <h5>Créer un nouvel stagaire</h5> -->
+      <hr />
+      <form (ngSubmit)="onSubmit()">
+       
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" class="form-control" id="nom" [(ngModel)]="stagaire.nom" name="nom"
+                placeholder="Enter nom" required />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Prenom</label>
+              <input type="text" class="form-control" id="prenom" [(ngModel)]="stagaire.prenom" name="prenom"
+                placeholder="Enter prenom" required />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Teléphone</label>
+              <input type="text" class="form-control" id="tel" [(ngModel)]="stagaire.tel" name="tel"
+                placeholder="Enter tel" required />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Adresse</label>
+              <input type="text" class="form-control" id="adresse" [(ngModel)]="stagaire.adresse" name="adresse"
+                placeholder="Enter adresse" required />
+            </div>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Date</label>
+              <input type="text" class="form-control" id="date" [(ngModel)]="stagaire.date" name="date"
+                placeholder="Enter date" required />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Supervisé par</label>
+              <input type="text" class="form-control" id="supervise" [(ngModel)]="stagaire.supervise" name="supervise"
+                placeholder="Enter supervise par" required />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="name">Objectif</label>
+              <input type="text" class="form-control" id="objectif" [(ngModel)]="stagaire.objectif" name="objectif"
+                placeholder="Enter objectif" required />
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Ajouter Stagaire</button>
+          </div>
+        </div>
+      </form>
+    <!-- </app-card> -->
+  </div>
+</div>

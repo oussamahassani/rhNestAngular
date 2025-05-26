@@ -1,0 +1,80 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Liste des Présences</h4>
+  </div>
+  <div class="card-body">
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <label>Employé</label>
+        <select class="form-control" [(ngModel)]="employeeFilter" (change)="applyFilters()">
+          <option value="">Tous</option>
+          <option *ngFor="let employee of employees" [value]="employee._id">
+            {{ employee.name }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label>Date</label>
+        <input type="date" class="form-control" [(ngModel)]="dateFilter" (change)="applyFilters()" />
+      </div>
+      <div class="col-md-4">
+        <label>Statut</label>
+        <select class="form-control" [(ngModel)]="statusFilter" (change)="applyFilters()">
+          <option value="">Tous</option>
+          <option value="present">Présent</option>
+          <option value="absent">Absent</option>
+          <option value="late">En retard</option>
+          <option value="vacation">Congé</option>
+          <option value="sick">Maladie</option>
+        </select>
+      </div>
+    </div>
+
+   <button class="btn btn-success mb-3">
+            <span >Générer Rapport</span>
+     
+              <i class="fas fa-spinner fa-spin"></i> Génération...
+         
+          </button>
+
+
+    
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Date</th>
+            <th>Arrivée</th>
+            <th>Départ</th>
+            <th>Heures</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of filteredRecords">
+        <td>{{ getEmployeeName(record.user) }}</td>
+            <td>{{ record.date }}</td>
+            <td>{{ record.heureArrive || 'N/A' }}</td>
+            <td>{{ record.heureDepart || 'N/A' }}</td>
+            <td>{{ calculateWorkingHours(record.heureArrive, record.heureDepart) }}</td>
+            <td>
+              <span [ngClass]="{
+                'badge bg-success': record.status === 'present',
+                'badge bg-danger': record.status === 'absent',
+                'badge bg-warning text-dark': record.status === 'late',
+                'badge bg-info': record.status === 'vacation',
+                'badge bg-secondary': record.status === 'sick'
+              }">
+                {{ record.status | uppercase }}
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="filteredRecords.length === 0">
+            <td colspan="6" class="text-center">Aucun enregistrement trouvé</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

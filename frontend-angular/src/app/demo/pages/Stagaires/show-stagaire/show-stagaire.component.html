@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-xl-12">
+    <app-card cardTitle="Liste des stagaires" [options]="false" blockClass="table-border-style">
+      <!-- Loading spinner -->
+      <div *ngIf="loading" class="text-center p-5">
+        <div class="spinner-border text-primary" stagaire="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Télephone</th>
+              <th>Adresse</th>
+              <th>Date</th>
+              <th>Supervisé par</th>
+              <th>objectif</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let stagaire of stagaires; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ stagaire.nom || 'N/A' }}</td>
+              <td>{{ stagaire.prenom || 'N/A' }}</td>
+              <td>{{ stagaire.tel || 'N/A' }}</td>
+              <td>{{ stagaire.adresse || 'N/A' }}</td>
+              <td>{{ stagaire.date || 'N/A' }}</td>
+              <td>{{ stagaire.supervise || 'N/A' }}</td>
+              <td>{{ stagaire.objectif || 'N/A' }}</td>
+              <td>
+                <button class="btn btn-sm btn-link text-primary me-2" (click)="editStagaire(stagaire._id)" title="Edit">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn btn-sm btn-link text-danger" (click)="deleteStagaire(stagaire._id)" title="Delete">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="!loading && stagaires.length === 0">
+              <td colspan="6" class="text-center">No stagaires found</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+</div>

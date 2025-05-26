@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-xl-12">
+    <app-card cardTitle="Liste des utilisateurs" [options]="false" blockClass="table-border-style">
+
+      <!-- Loading spinner -->
+      <div *ngIf="loading" class="text-center p-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <!-- Table des utilisateurs -->
+      <div class="table-responsive" *ngIf="!loading">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nom</th>
+              <th>Email</th>
+              <th>Rôle</th>
+              <th *ngIf="displayPoste()">Poste</th>
+              <th *ngIf="displayPoste()">Date d'embauche</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ user.name || 'N/A' }}</td>
+              <td>{{ user.email || 'N/A' }}</td>
+              <td>{{ user.role?.name || 'N/A' }}</td>
+              <td *ngIf="displayPoste()">
+                {{ isEmployee(user) ? (user.poste || 'N/A') : '—' }}
+              </td>
+              <td *ngIf="displayPoste()">
+                {{ isEmployee(user) ? (user.date || 'N/A') : '—' }}
+              </td>
+              <td>
+                <button class="btn btn-sm btn-link text-primary me-2" (click)="editUser(user._id)" title="Modifier">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn btn-sm btn-link text-danger" (click)="deleteUser(user._id)" title="Supprimer">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr *ngIf="users.length === 0">
+              <td colspan="7" class="text-center">Aucun utilisateur trouvé</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </app-card>
+  </div>
+</div>

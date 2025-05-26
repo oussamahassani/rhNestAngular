@@ -1,0 +1,67 @@
+<div class="container mt-3">
+  <h3>Liste des Présences</h3>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label>Employé</label>
+      <select class="form-control" [(ngModel)]="employeeFilter" (change)="applyFilters()">
+        <option value="">Tous</option>
+        <option *ngFor="let employee of employees" [value]="employee._id">{{ employee.name }}</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label>Date</label>
+      <input type="date" class="form-control" [(ngModel)]="dateFilter" (change)="applyFilters()">
+    </div>
+    <div class="col-md-4">
+      <label>Statut</label>
+      <select class="form-control" [(ngModel)]="statusFilter" (change)="applyFilters()">
+        <option value="">Tous</option>
+        <option value="present">Présent</option>
+        <option value="absent">Absent</option>
+        <option value="late">En retard</option>
+        <option value="vacation">Congé</option>
+        <option value="sick">Maladie</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Date</th>
+          <th>Arrivée</th>
+          <th>Départ</th>
+          <th>Heures</th>
+          <th>Statut</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of filteredRecords">
+          <td>{{ getEmployeeName(record.employeeId) }}</td>
+          <td>{{ record.date | date:'dd/MM/yyyy' }}</td>
+          <td>{{ record.heureArrive || 'N/A' }}</td>
+          <td>{{ record.heureDepart || 'N/A' }}</td>
+          <td>{{ calculateWorkingHours(record.heureArrive, record.heureDepart) }}</td>
+          <td>
+            <span [ngClass]="{
+              'badge badge-success': record.status === 'present',
+              'badge badge-danger': record.status === 'absent',
+              'badge badge-warning': record.status === 'late',
+              'badge badge-info': record.status === 'vacation' || record.status === 'sick'
+            }">
+              {{ record.status }}
+            </span>
+          </td>
+          <td>{{ record.notes }}</td>
+        </tr>
+        <tr *ngIf="filteredRecords.length === 0">
+          <td colspan="7" class="text-center">Aucune présence trouvée</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

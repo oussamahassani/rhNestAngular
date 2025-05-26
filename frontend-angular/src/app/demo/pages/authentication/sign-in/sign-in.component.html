@@ -1,0 +1,65 @@
+<div class="auth-wrapper">
+  <div class="auth-content">
+    <div class="card">
+      <div class="row align-items-center text-center">
+        <div class="col-md-12">
+          <div class="card-body">
+            <img src="assets/images/logo.png" alt="logo" class="img-fluid mb-4" />
+            <h4 class="mb-3 f-w-400">SignIn</h4>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="feather icon-mail"></i></span>
+                <input type="email" class="form-control" placeholder="Email address" formControlName="email"
+                  [class.is-invalid]="loginForm.get('email')!.invalid && loginForm.get('email')!.touched" />
+              </div>
+              <!-- <div *ngIf="loginForm.get('email')!.invalid && loginForm.get('email')!.touched"
+                class="text-danger mb-2 text-start">
+                <small *ngIf="loginForm.get('email')?.errors?.required">Email is required</small>
+                <small *ngIf="loginForm.get('email')?.errors?.email">Please enter a valid email</small>
+              </div> -->
+
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="feather icon-lock"></i></span>
+                <input type="password" class="form-control" placeholder="Password" formControlName="password"
+                  [class.is-invalid]="loginForm.get('password')!.invalid && loginForm.get('password')!.touched" />
+              </div>
+              <div *ngIf="loginForm.get('password')!.invalid && loginForm.get('password')!.touched"
+                class="text-danger mb-2 text-start">
+                <small>Password is required</small>
+              </div>
+
+              <div class="form-group text-start mt-2">
+                <div class="checkbox checkbox-primary d-inline">
+                  <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="" />
+                  <label for="checkbox-fill-a1" class="cr">Save credentials</label>
+                </div>
+              </div>
+
+              <div *ngIf="errorMessage" class="alert alert-danger mb-3">
+                {{ errorMessage }}
+              </div>
+
+              <div class="d-grid">
+                <button class="btn btn-block btn-primary mb-4" type="submit"
+                  [disabled]="loginForm!.invalid || isLoading">
+                  <span *ngIf="!isLoading">SignIn</span>
+                  <span *ngIf="isLoading">Please wait...</span>
+                </button>
+              </div>
+            </form>
+
+            <p class="mb-2 text-muted">
+              Forgot password?
+              <a href="javascriprt:" class="f-w-400">Reset</a>
+            </p>
+            <p class="mb-0 text-muted">
+              Don't have an account?
+              <a [routerLink]="['/auth/signup']" class="f-w-400">Signup</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

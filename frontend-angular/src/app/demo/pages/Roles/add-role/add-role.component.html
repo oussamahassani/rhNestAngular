@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-sm-12">
+<!-- 
+      <app-card cardTitle="Formulaire de création de role" [options]="false"> -->
+    <!-- <h5>Créer un nouvel role</h5> -->
+      <hr />
+      <form (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="role.name" name="name"
+                placeholder="Enter full name" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Ajouter Role</button>
+          </div>
+        </div>
+      </form>
+    <!-- </app-card> -->
+  </div>
+</div>

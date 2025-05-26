@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-sm-12">
+        <app-card [cardTitle]="isEditMode ? 'Update Presence' : 'Create Presence'" [options]="false">
+            <h5>{{ isEditMode ? 'Update' : 'Create' }} Presence Form</h5>
+            <hr />
+            <form (ngSubmit)="onSubmit()">
+                
+                <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Date</label>
+              <input type="text" class="form-control" id="date" [(ngModel)]="presence.date" name="date"
+                placeholder="Enter date" required />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Heure d'Arriveé</label>
+              <input type="text" class="form-control" id="heureArrive" [(ngModel)]="presence.heureArrive" name="heureArrive"
+                placeholder="Enter heureArrive" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Heure de depart</label>
+              <input type="text" class="form-control" id="heureDepart" [(ngModel)]="presence.heureDepart" name="heureDepart"
+                placeholder="Enter heureDepart" required />
+            </div>
+          </div>
+        
+        </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">
+                            {{ isEditMode ? 'Update' : 'Create' }} Presence
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </app-card>
+    </div>
+</div>

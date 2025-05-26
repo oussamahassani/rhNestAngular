@@ -1,0 +1,159 @@
+<div class="attendance-management-container">
+  <h2>Gestion des Présences et Absences</h2>
+  
+  <div class="row">
+    <!-- Attendance Form -->
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-header">
+         <!--  <h4>Enregistrer une présence/absence</h4> -->
+        </div>
+        <div class="card-body">
+          <form [formGroup]="attendanceForm" (ngSubmit)="submitAttendance()">
+            <div class="form-group">
+              <label for="employeeId">Employé/Stagiaire</label>
+              <select id="employeeId" formControlName="employeeId" class="form-control" required>
+                <option value="">Sélectionner...</option>
+                <option *ngFor="let employee of employees" [value]="employee._id">
+                  {{ employee.name }} ({{ employee.role }})
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" id="date" formControlName="date" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="arrivalTime">Heure d'arrivée</label>
+              <input type="time" id="arrivalTime" formControlName="arrivalTime" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="departureTime">Heure de départ</label>
+              <input type="time" id="departureTime" formControlName="departureTime" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="status">Statut</label>
+              <select id="status" formControlName="status" class="form-control" required>
+                <option value="present">Présent</option>
+                <option value="absent">Absent</option>
+                <option value="late">En retard</option>
+                <option value="vacation">Congé</option>
+                <option value="sick">Maladie</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Notes</label>
+              <textarea id="notes" formControlName="notes" class="form-control" rows="2"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="!attendanceForm.valid">
+              Enregistrer
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters and Report -->
+    <div class="col-md-7">
+      <div class="card">
+        <div class="card-header">
+          <h4>Filtres et Rapports</h4>
+        </div>
+        <div class="card-body">
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label>Employé</label>
+              <select class="form-control" [(ngModel)]="employeeFilter" (change)="applyFilters()">
+                <option value="">Tous</option>
+                <option *ngFor="let employee of employees" [value]="employee._id">
+                  {{ employee.name }}
+                </option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label>Date</label>
+              <input type="date" class="form-control" [(ngModel)]="dateFilter" (change)="applyFilters()">
+            </div>
+            <div class="col-md-4">
+              <label>Statut</label>
+              <select class="form-control" [(ngModel)]="statusFilter" (change)="applyFilters()">
+                <option value="">Tous</option>
+                <option value="present">Présent</option>
+                <option value="absent">Absent</option>
+                <option value="late">En retard</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn btn-success mb-3" (click)="generateReport()" [disabled]="isGeneratingReport">
+            <span *ngIf="!isGeneratingReport">Générer Rapport</span>
+            <span *ngIf="isGeneratingReport">
+              <i class="fas fa-spinner fa-spin"></i> Génération...
+            </span>
+          </button>
+
+          <!-- Attendance Records Table -->
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <!-- <th>Nom</th> -->
+                  <th>Date</th>
+                  <th>Arrivée</th>
+                  <th>Départ</th>
+                  <th>Heures</th>
+                  <!-- <th>Statut</th> -->
+                  <!-- <th>Notes</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let record of filteredRecords">
+                  <!-- <td>{{ getEmployeeName(record.employeeId) }}</td> -->
+                  <td>{{ record.date | date:'dd/MM/yyyy' }}</td>
+                  <td>{{ record.heureDepart || 'N/A' }}</td>
+                  <td>{{ record.heureArrive || 'N/A' }}</td>
+                  <td><!-- {{ calculateWorkingHours(record?.heureArrive, record?.heureDepart) }} --></td>
+                  <!-- <td>
+                    <span [ngClass]="{
+                      'badge badge-success': record.status === 'present',
+                      'badge badge-danger': record.status === 'absent',
+                      'badge badge-warning': record.status === 'late'
+                    }">
+                      {{ record.status | uppercase }}
+                    </span>
+                  </td> -->
+                  <!-- <td>{{ record.notes }}</td> -->
+                </tr>
+                <tr *ngIf="filteredRecords.length === 0">
+                  <td colspan="7" class="text-center">Aucun enregistrement trouvé</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Report Display -->
+  <div class="row mt-3" *ngIf="reportData">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>Rapport de Présence</h4>
+        </div>
+        <div class="card-body">
+          <!-- Report content would be displayed here -->
+          <pre>{{ reportData | json }}</pre>
+          <!-- In a real app, you would have a proper report display component -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
