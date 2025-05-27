@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { NewRole, Role } from '../models/role.model';
+import {encryptData} from './utlisDataSensitive'
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class RoleService {
 
   // Create a new role
   createRole(role: NewRole): Observable<Role> {
-    return this.http.post<Role>(this.apiUrl, role);
+    return this.http.post<Role>(this.apiUrl, {role:encryptData(role, 'MA_CLE_SECRETE')});
   }
 
   // Update an existing role

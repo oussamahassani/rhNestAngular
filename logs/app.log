@@ -1,0 +1,201 @@
+[2025-05-27T13:14:59.318Z] [LOG] UserController {/users}:
+[2025-05-27T13:14:59.321Z] [LOG] Mapped {/users, POST} route
+[2025-05-27T13:14:59.322Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-27T13:14:59.322Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-27T13:14:59.323Z] [LOG] Mapped {/users, GET} route
+[2025-05-27T13:14:59.324Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-27T13:14:59.324Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-27T13:14:59.325Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-27T13:14:59.325Z] [LOG] RoleController {/roles}:
+[2025-05-27T13:14:59.326Z] [LOG] Mapped {/roles, POST} route
+[2025-05-27T13:14:59.326Z] [LOG] Mapped {/roles, GET} route
+[2025-05-27T13:14:59.327Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-27T13:14:59.330Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-27T13:14:59.333Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-27T13:14:59.333Z] [LOG] AuthController {/auth}:
+[2025-05-27T13:14:59.333Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-27T13:14:59.334Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-27T13:14:59.334Z] [LOG] StagaireController {/stagaires}:
+[2025-05-27T13:14:59.335Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-27T13:14:59.335Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-27T13:14:59.336Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-27T13:14:59.336Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-27T13:14:59.336Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-27T13:14:59.337Z] [LOG] DemandeController {/demandes}:
+[2025-05-27T13:14:59.337Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-27T13:14:59.337Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-27T13:14:59.338Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-27T13:14:59.338Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-27T13:14:59.339Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-27T13:14:59.339Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-27T13:14:59.339Z] [LOG] PresenceController {/presences}:
+[2025-05-27T13:14:59.340Z] [LOG] Mapped {/presences, POST} route
+[2025-05-27T13:14:59.340Z] [LOG] Mapped {/presences, GET} route
+[2025-05-27T13:14:59.340Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-27T13:14:59.341Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-27T13:14:59.341Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-27T13:14:59.342Z] [LOG] SupabaseController {/supabase}:
+[2025-05-27T13:14:59.342Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-27T13:14:59.345Z] [LOG] Nest application successfully started
+[2025-05-27T13:16:24.124Z] [ERROR] Email already in usef5cc5e7600@emaily.pro - undefined
+[2025-05-27T13:20:51.171Z] [LOG] UserController {/users}:
+[2025-05-27T13:20:51.174Z] [LOG] Mapped {/users, POST} route
+[2025-05-27T13:20:51.174Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-27T13:20:51.175Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-27T13:20:51.176Z] [LOG] Mapped {/users, GET} route
+[2025-05-27T13:20:51.177Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-27T13:20:51.177Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-27T13:20:51.178Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-27T13:20:51.178Z] [LOG] RoleController {/roles}:
+[2025-05-27T13:20:51.179Z] [LOG] Mapped {/roles, POST} route
+[2025-05-27T13:20:51.180Z] [LOG] Mapped {/roles, GET} route
+[2025-05-27T13:20:51.180Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-27T13:20:51.181Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-27T13:20:51.181Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-27T13:20:51.183Z] [LOG] AuthController {/auth}:
+[2025-05-27T13:20:51.183Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-27T13:20:51.184Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-27T13:20:51.184Z] [LOG] StagaireController {/stagaires}:
+[2025-05-27T13:20:51.185Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-27T13:20:51.185Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-27T13:20:51.185Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-27T13:20:51.186Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-27T13:20:51.186Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-27T13:20:51.187Z] [LOG] DemandeController {/demandes}:
+[2025-05-27T13:20:51.187Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-27T13:20:51.187Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-27T13:20:51.188Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-27T13:20:51.188Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-27T13:20:51.189Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-27T13:20:51.189Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-27T13:20:51.189Z] [LOG] PresenceController {/presences}:
+[2025-05-27T13:20:51.190Z] [LOG] Mapped {/presences, POST} route
+[2025-05-27T13:20:51.190Z] [LOG] Mapped {/presences, GET} route
+[2025-05-27T13:20:51.190Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-27T13:20:51.191Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-27T13:20:51.191Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-27T13:20:51.191Z] [LOG] SupabaseController {/supabase}:
+[2025-05-27T13:20:51.192Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-27T13:20:51.195Z] [LOG] Nest application successfully started
+[2025-05-27T13:21:40.609Z] [ERROR] MongoServerError: E11000 duplicate key error collection: gestionressource.roles index: user_1 dup key: { user: null } - undefined
+[2025-05-27T13:24:18.350Z] [LOG] UserController {/users}:
+[2025-05-27T13:24:18.353Z] [LOG] Mapped {/users, POST} route
+[2025-05-27T13:24:18.355Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-27T13:24:18.356Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-27T13:24:18.357Z] [LOG] Mapped {/users, GET} route
+[2025-05-27T13:24:18.357Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-27T13:24:18.358Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-27T13:24:18.359Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-27T13:24:18.359Z] [LOG] RoleController {/roles}:
+[2025-05-27T13:24:18.360Z] [LOG] Mapped {/roles, POST} route
+[2025-05-27T13:24:18.360Z] [LOG] Mapped {/roles, GET} route
+[2025-05-27T13:24:18.361Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-27T13:24:18.361Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-27T13:24:18.362Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-27T13:24:18.362Z] [LOG] AuthController {/auth}:
+[2025-05-27T13:24:18.362Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-27T13:24:18.363Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-27T13:24:18.363Z] [LOG] StagaireController {/stagaires}:
+[2025-05-27T13:24:18.364Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-27T13:24:18.364Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-27T13:24:18.365Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-27T13:24:18.365Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-27T13:24:18.366Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-27T13:24:18.366Z] [LOG] DemandeController {/demandes}:
+[2025-05-27T13:24:18.366Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-27T13:24:18.367Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-27T13:24:18.369Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-27T13:24:18.370Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-27T13:24:18.370Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-27T13:24:18.371Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-27T13:24:18.371Z] [LOG] PresenceController {/presences}:
+[2025-05-27T13:24:18.372Z] [LOG] Mapped {/presences, POST} route
+[2025-05-27T13:24:18.372Z] [LOG] Mapped {/presences, GET} route
+[2025-05-27T13:24:18.372Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-27T13:24:18.373Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-27T13:24:18.373Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-27T13:24:18.373Z] [LOG] SupabaseController {/supabase}:
+[2025-05-27T13:24:18.374Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-27T13:24:18.376Z] [LOG] Nest application successfully started
+[2025-05-27T13:24:21.921Z] [ERROR] MongoServerError: E11000 duplicate key error collection: gestionressource.roles index: user_1 dup key: { user: null } - undefined
+[2025-05-27T13:27:33.251Z] [LOG] UserController {/users}:
+[2025-05-27T13:27:33.254Z] [LOG] Mapped {/users, POST} route
+[2025-05-27T13:27:33.256Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-27T13:27:33.257Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-27T13:27:33.258Z] [LOG] Mapped {/users, GET} route
+[2025-05-27T13:27:33.259Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-27T13:27:33.259Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-27T13:27:33.260Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-27T13:27:33.260Z] [LOG] RoleController {/roles}:
+[2025-05-27T13:27:33.261Z] [LOG] Mapped {/roles, POST} route
+[2025-05-27T13:27:33.262Z] [LOG] Mapped {/roles, GET} route
+[2025-05-27T13:27:33.263Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-27T13:27:33.263Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-27T13:27:33.264Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-27T13:27:33.264Z] [LOG] AuthController {/auth}:
+[2025-05-27T13:27:33.264Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-27T13:27:33.265Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-27T13:27:33.265Z] [LOG] StagaireController {/stagaires}:
+[2025-05-27T13:27:33.266Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-27T13:27:33.266Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-27T13:27:33.267Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-27T13:27:33.267Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-27T13:27:33.268Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-27T13:27:33.268Z] [LOG] DemandeController {/demandes}:
+[2025-05-27T13:27:33.269Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-27T13:27:33.269Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-27T13:27:33.271Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-27T13:27:33.272Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-27T13:27:33.273Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-27T13:27:33.273Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-27T13:27:33.274Z] [LOG] PresenceController {/presences}:
+[2025-05-27T13:27:33.275Z] [LOG] Mapped {/presences, POST} route
+[2025-05-27T13:27:33.275Z] [LOG] Mapped {/presences, GET} route
+[2025-05-27T13:27:33.276Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-27T13:27:33.276Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-27T13:27:33.277Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-27T13:27:33.277Z] [LOG] SupabaseController {/supabase}:
+[2025-05-27T13:27:33.278Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-27T13:27:33.280Z] [LOG] Nest application successfully started
+[2025-05-27T13:27:36.482Z] [LOG] [object Object]
+[2025-05-27T13:27:36.501Z] [ERROR] MongoServerError: E11000 duplicate key error collection: gestionressource.roles index: user_1 dup key: { user: null } - undefined
+[2025-05-27T13:29:53.504Z] [LOG] UserController {/users}:
+[2025-05-27T13:29:53.507Z] [LOG] Mapped {/users, POST} route
+[2025-05-27T13:29:53.508Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-27T13:29:53.509Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-27T13:29:53.509Z] [LOG] Mapped {/users, GET} route
+[2025-05-27T13:29:53.510Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-27T13:29:53.511Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-27T13:29:53.512Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-27T13:29:53.512Z] [LOG] RoleController {/roles}:
+[2025-05-27T13:29:53.513Z] [LOG] Mapped {/roles, POST} route
+[2025-05-27T13:29:53.513Z] [LOG] Mapped {/roles, GET} route
+[2025-05-27T13:29:53.514Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-27T13:29:53.514Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-27T13:29:53.515Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-27T13:29:53.515Z] [LOG] AuthController {/auth}:
+[2025-05-27T13:29:53.516Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-27T13:29:53.516Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-27T13:29:53.517Z] [LOG] StagaireController {/stagaires}:
+[2025-05-27T13:29:53.517Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-27T13:29:53.517Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-27T13:29:53.518Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-27T13:29:53.518Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-27T13:29:53.521Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-27T13:29:53.521Z] [LOG] DemandeController {/demandes}:
+[2025-05-27T13:29:53.522Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-27T13:29:53.522Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-27T13:29:53.522Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-27T13:29:53.523Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-27T13:29:53.523Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-27T13:29:53.524Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-27T13:29:53.524Z] [LOG] PresenceController {/presences}:
+[2025-05-27T13:29:53.524Z] [LOG] Mapped {/presences, POST} route
+[2025-05-27T13:29:53.525Z] [LOG] Mapped {/presences, GET} route
+[2025-05-27T13:29:53.525Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-27T13:29:53.526Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-27T13:29:53.526Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-27T13:29:53.527Z] [LOG] SupabaseController {/supabase}:
+[2025-05-27T13:29:53.527Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-27T13:29:53.530Z] [LOG] Nest application successfully started
+[2025-05-27T13:31:19.939Z] [LOG] [object Object]

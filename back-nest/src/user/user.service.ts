@@ -3,6 +3,7 @@ import {
   NotFoundException,
   ConflictException,
   BadRequestException,
+  Logger
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -15,9 +16,11 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { User, UserDocument } from 'src/schemas/user.schema';
 import { Role, RoleDocument } from 'src/schemas/role.schema';
 import { MailerService } from '../mailer/mailer.service'; // ajuster le chemin
-
+import {decryptData} from '../utilsDecript'
 @Injectable()
 export class UserService {
+      private readonly logger = new Logger(UserService.name);
+  
   constructor(
     @InjectModel(User.name) private readonly userModel: Model<UserDocument>,
     @InjectModel(Role.name) private readonly roleModel: Model<RoleDocument>,
@@ -26,11 +29,13 @@ export class UserService {
   ) { }
   //  Créer un nouvel utilisateur
     async SignupUser(createUserDto: SingUpUserDto): Promise<Boolean> {
+      this.logger.log(createUserDto)
           const hashedPassword = await bcrypt.hash(createUserDto.password, 10);
    const existingRole = await this.roleModel.findOne({ name: "employee"})
    if(existingRole){
-    console.log(existingRole)
-    console.log(existingRole._id)
+          this.logger.log(existingRole._id)
+
+   
     const createdUser = new this.userModel({...createUserDto,password:hashedPassword,
               planType: 'free',
               role:existingRole._id,
@@ -47,8 +52,10 @@ export class UserService {
 
       async resetPassword(email: string): Promise<any> {
     // 1. Vérifie que l’utilisateur existe
-    const user = await this.userModel.findOne({email:email});
+    const data = decryptData(email, process.env.mySecret||"MA_CLE_SECRETE");
+    const user = await this.userModel.findOne({email:data});
     if (!user) {
+           this.logger.error('Utilisateur non trouvé')
       throw new Error('Utilisateur non trouvé');
     }
 
@@ -70,11 +77,14 @@ user.password = hashedPassword ;
   async create(createUserDto: CreateUserDto): Promise<User | null> {
     const existingUser = await this.userModel.findOne({ email: createUserDto.email });
     if (existingUser) {
+       this.logger.error('Email already in use'+createUserDto.email )
       throw new ConflictException('Email already in use');
     }
 
     const role = await this.roleModel.findById(createUserDto.role);
     if (!role) {
+             this.logger.error('Role not found'+createUserDto.role )
+
       throw new NotFoundException('Role not found');
     }
 
@@ -82,6 +92,8 @@ user.password = hashedPassword ;
 
     if (roleName === 'employee') {
       if (!createUserDto.poste || !createUserDto.date) {
+                     this.logger.error('Poste and date are required for employees' )
+
         throw new BadRequestException('Poste and date are required for employees');
       }
     } else {
@@ -104,7 +116,7 @@ user.password = hashedPassword ;
     });
 
     await createdUser.save();
-    return this.userModel.findById(createdUser._id).populate('role');
+    return this.userModel.findById(createdUser._id);
   }
 
   //  Récupérer tous les utilisateurs

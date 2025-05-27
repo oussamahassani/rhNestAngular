@@ -4,6 +4,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from 'src/schemas/user.schema'; 
 import { SingUpUserDto } from './dto/Singup-dto';
+import {decryptData} from '../utilsDecript'
 
 
 @Controller('users')
@@ -11,16 +12,19 @@ export class UserController {
   constructor(private readonly usersService: UserService) {}
 
   @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.usersService.create(createUserDto);
+  create( @Body('payload') payload: string) {
+      const data = decryptData(payload, 'MA_CLE_SECRETE');
+    return this.usersService.create(data);
   }
 @Post('reset-password')
 async resetPassword(@Body('email') email: string) {
   return this.usersService.resetPassword(email);
 }
   @Post("/signup")
-  SignupUser(@Body() createUserDto: SingUpUserDto) {
-    return this.usersService.SignupUser(createUserDto);
+  SignupUser(@Body('payload') payload: string) {
+      const data = decryptData(payload, 'MA_CLE_SECRETE');
+
+    return this.usersService.SignupUser(data);
   }
   @Get()
   findAll(): Promise<User[]> {

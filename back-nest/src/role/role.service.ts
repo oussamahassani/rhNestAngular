@@ -27,7 +27,7 @@ export class RoleService {
    
       
     }
-
+this.logger.log(createRoleDto);
     const newRole = new this.roleModel(createRoleDto);
 
     return newRole.save();

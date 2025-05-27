@@ -8,6 +8,8 @@ import { DemandeModule } from './Demande/demande.module';
 import { PresenceModule } from './Presence/presence.module';
 import {SupabaseModule} from './supabase/supabase.module'
 import {MailerModule} from './mailer/mailer.module';
+import { FileLoggerService } from './FileLogger'; // adapte le chemin
+
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://127.0.0.1/gestionressource'),
@@ -21,5 +23,7 @@ import {MailerModule} from './mailer/mailer.module';
 MailerModule
 
   ],
+    providers: [FileLoggerService],
+
 })
 export class AppModule {}

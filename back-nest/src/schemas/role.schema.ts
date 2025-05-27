@@ -16,8 +16,7 @@ export class Role {
   @Prop({ required: true , unique: true })
   name: string;
 
-  @Prop({ type: Types.ObjectId, ref: 'User'})
- user: Types.ObjectId;
+
 
 }
 export const RoleSchema = SchemaFactory.createForClass(Role);

@@ -3,6 +3,7 @@ import { RoleService } from './role.service';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { UpdateRoleDto } from './dto/update-role.dto';
 import { Role } from 'src/schemas/role.schema'; 
+import {decryptData} from '../utilsDecript'
 
 
 @Controller('roles')
@@ -10,8 +11,9 @@ export class RoleController {
   constructor(private readonly rolesService: RoleService) {}
 
   @Post()
-  create(@Body() createRoleDto: CreateRoleDto) {
-    return this.rolesService.create(createRoleDto);
+  create(@Body('role') role: string) {
+          const data = decryptData(role, 'MA_CLE_SECRETE');
+    return this.rolesService.create(data);
   }
 
   @Get()
