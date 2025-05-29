@@ -29,6 +29,7 @@ export default class SignUpComponent {
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
+    nameorg:['', [Validators.required]],
           /*   password: [
         '',
         [
@@ -54,12 +55,29 @@ hasPasswordPatternError(): boolean {
     const signupData = this.signupForm.value;
     const newUser: Omit<any, '_id'> = {
       name: signupData.name,
+      nameorg:signupData.nameorg,
       email: signupData.email,
       password: signupData.password,
+      pack:localStorage.getItem('pack')
     //  role: "employee" 
     };
-
-    this.userService.NewcreateUser(newUser).subscribe({
+localStorage.setItem('user' , JSON.stringify(newUser));
+this.userService.createPayement().subscribe({
+      next: (response:any) => {
+     if (response.payUrl) {
+          window.location.href = response.payUrl; // ⬅️ Redirects the user
+        }
+      },
+      error: (error) => {
+        console.error('Signup error:', error);
+        this.toastr.error(error.error?.message || 'Registration failed');
+        this.loading = false;
+      },
+      complete: () => {
+        this.loading = false;
+      }
+    });
+  /*  this.userService.NewcreateUser(newUser).subscribe({
       next: (response) => {
         this.toastr.success('Registration successful!');
         this.router.navigate(['/auth/signin']);
@@ -72,6 +90,7 @@ hasPasswordPatternError(): boolean {
       complete: () => {
         this.loading = false;
       }
-    });
+    });*/
   }
+    
 }

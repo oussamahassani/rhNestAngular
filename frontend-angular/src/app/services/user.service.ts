@@ -9,6 +9,7 @@ import {encryptData} from './utlisDataSensitive'
 })
 export class UserService {
   private apiUrl = 'http://localhost:3003/users'; // Update with your Spring Boot server URL
+  private apiPayementUrl = 'http://localhost:3003'; // Update with your Spring Boot server URL
 
   constructor(private http: HttpClient) {}
 
@@ -19,6 +20,41 @@ export class UserService {
 resetPassword(email: string) {
     return this.http.post(`${this.apiUrl}/reset-password`, {
       email:encryptData(email, 'MA_CLE_SECRETE'),
+    });
+  }
+  createPayement(){
+     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let orderId = '';
+  for (let i = 0; i < length; i++) {
+    orderId += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+
+
+    return this.http.post(`${this.apiPayementUrl}/payments/initiate`, {
+   "name": "employee",
+  "user": "68344752bae5a5dd4f296ef4",
+  "amount": 1380,
+    "receiverWalletId": "6838782ada51a7fbaba21c57",
+  "token": "TND",
+  "type": "immediate",
+  "description": "payment description",
+  "acceptedPaymentMethods": [
+    "wallet",
+    "bank_card",
+    "e-DINAR"
+  ],
+  "lifespan": 10,
+  "checkoutForm": true,
+  "addPaymentFeesToAmount": true,
+  "firstName": "John",
+  "lastName": "Doe",
+  "phoneNumber": "22777777",
+  "email": "john.doe@gmail.com",
+  "orderId": orderId,
+  "webhook": "https://merchant.tech/api/notification_payment",
+  "silentWebhook": true,
+  "successUrl": "http://localhost:4200/auth/payment-success",
+  "failUrl": "https://localhost:4200/auth/payement-error",
     });
   }
   // Get a single user by ID

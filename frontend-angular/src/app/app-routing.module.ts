@@ -109,7 +109,7 @@ const routes: Routes = [
     component: GuestComponent,
     children: [
       {
-        path: 'auth/signup',
+        path: 'auth/signup-2',
         loadComponent: () => import('./demo/pages/authentication/sign-up/sign-up.component')
       },
         {
@@ -119,6 +119,18 @@ const routes: Routes = [
       {
         path: 'auth/signin',
         loadComponent: () => import('./demo/pages/authentication/sign-in/sign-in.component')
+      },
+      {
+        path: 'auth/signup',
+        loadComponent: () => import('./demo/pages/subcription/subcription.component').then(m => m.SubcriptionComponent )
+      },
+        {
+        path: 'auth/payment-success',
+        loadComponent: () => import('./payment-success/payment-success.component').then(m => m.PaymentSuccessComponent )
+      },
+        {
+        path: 'auth/payement-error',
+        loadComponent: () => import('./payment-faileur/payment-faileur.component').then(m => m.PaymentFaileurComponent )
       }
     ]
   }

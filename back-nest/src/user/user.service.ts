@@ -50,6 +50,28 @@ export class UserService {
    return false ;
     }
 
+    async createuser(data :any){
+        const hashedPassword = await bcrypt.hash(data.password, 10);
+   const existingRole = await this.roleModel.findOne({ name: "admin"})
+   if(existingRole){
+          this.logger.log(existingRole._id)
+
+   
+    const createdUser = new this.userModel({...data,password:hashedPassword,
+              
+              role:existingRole._id,
+        startDate: new Date(),
+        isActive: true,
+        paymentMethod: 'none',
+        autoRenew: false
+    });
+     createdUser.save();
+     return true ;
+   }
+   return false ;
+    }
+    
+
       async resetPassword(email: string): Promise<any> {
     // 1. Vérifie que l’utilisateur existe
     const data = decryptData(email, process.env.mySecret||"MA_CLE_SECRETE");

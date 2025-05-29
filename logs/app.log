@@ -199,3 +199,309 @@
 [2025-05-27T13:29:53.527Z] [LOG] Mapped {/supabase/upload, POST} route
 [2025-05-27T13:29:53.530Z] [LOG] Nest application successfully started
 [2025-05-27T13:31:19.939Z] [LOG] [object Object]
+[2025-05-28T17:15:08.630Z] [LOG] UserController {/users}:
+[2025-05-28T17:15:08.633Z] [LOG] Mapped {/users, POST} route
+[2025-05-28T17:15:08.634Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-28T17:15:08.634Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-28T17:15:08.635Z] [LOG] Mapped {/users, GET} route
+[2025-05-28T17:15:08.636Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-28T17:15:08.636Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-28T17:15:08.638Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-28T17:15:08.639Z] [LOG] RoleController {/roles}:
+[2025-05-28T17:15:08.639Z] [LOG] Mapped {/roles, POST} route
+[2025-05-28T17:15:08.640Z] [LOG] Mapped {/roles, GET} route
+[2025-05-28T17:15:08.640Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-28T17:15:08.641Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-28T17:15:08.641Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-28T17:15:08.642Z] [LOG] AuthController {/auth}:
+[2025-05-28T17:15:08.642Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-28T17:15:08.643Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-28T17:15:08.643Z] [LOG] StagaireController {/stagaires}:
+[2025-05-28T17:15:08.644Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-28T17:15:08.644Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-28T17:15:08.645Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-28T17:15:08.645Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-28T17:15:08.646Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-28T17:15:08.646Z] [LOG] DemandeController {/demandes}:
+[2025-05-28T17:15:08.646Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-28T17:15:08.647Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-28T17:15:08.647Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-28T17:15:08.647Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-28T17:15:08.648Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-28T17:15:08.648Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-28T17:15:08.648Z] [LOG] PresenceController {/presences}:
+[2025-05-28T17:15:08.649Z] [LOG] Mapped {/presences, POST} route
+[2025-05-28T17:15:08.649Z] [LOG] Mapped {/presences, GET} route
+[2025-05-28T17:15:08.649Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-28T17:15:08.650Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-28T17:15:08.650Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-28T17:15:08.651Z] [LOG] SupabaseController {/supabase}:
+[2025-05-28T17:15:08.651Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-28T17:15:08.654Z] [LOG] Nest application successfully started
+[2025-05-28T17:26:29.191Z] [LOG] [object Object]
+[2025-05-28T17:26:29.276Z] [LOG] 68344763e902863b94186920
+[2025-05-29T12:08:02.194Z] [LOG] UserController {/users}:
+[2025-05-29T12:08:02.200Z] [LOG] Mapped {/users, POST} route
+[2025-05-29T12:08:02.200Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-29T12:08:02.201Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-29T12:08:02.202Z] [LOG] Mapped {/users, GET} route
+[2025-05-29T12:08:02.203Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-29T12:08:02.203Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-29T12:08:02.204Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-29T12:08:02.204Z] [LOG] RoleController {/roles}:
+[2025-05-29T12:08:02.204Z] [LOG] Mapped {/roles, POST} route
+[2025-05-29T12:08:02.205Z] [LOG] Mapped {/roles, GET} route
+[2025-05-29T12:08:02.207Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-29T12:08:02.209Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-29T12:08:02.209Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-29T12:08:02.210Z] [LOG] AuthController {/auth}:
+[2025-05-29T12:08:02.210Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-29T12:08:02.211Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-29T12:08:02.211Z] [LOG] StagaireController {/stagaires}:
+[2025-05-29T12:08:02.212Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-29T12:08:02.212Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-29T12:08:02.213Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-29T12:08:02.213Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-29T12:08:02.213Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-29T12:08:02.214Z] [LOG] DemandeController {/demandes}:
+[2025-05-29T12:08:02.214Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-29T12:08:02.214Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-29T12:08:02.215Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-29T12:08:02.215Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-29T12:08:02.216Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-29T12:08:02.216Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-29T12:08:02.216Z] [LOG] PresenceController {/presences}:
+[2025-05-29T12:08:02.217Z] [LOG] Mapped {/presences, POST} route
+[2025-05-29T12:08:02.217Z] [LOG] Mapped {/presences, GET} route
+[2025-05-29T12:08:02.218Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-29T12:08:02.218Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-29T12:08:02.219Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-29T12:08:02.219Z] [LOG] SupabaseController {/supabase}:
+[2025-05-29T12:08:02.220Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-29T12:08:02.222Z] [LOG] Nest application successfully started
+[2025-05-29T13:30:59.721Z] [LOG] PaymentController {/payments}:
+[2025-05-29T13:30:59.727Z] [LOG] Mapped {/payments/initiate, POST} route
+[2025-05-29T13:30:59.728Z] [LOG] Mapped {/payments/:paymentId, GET} route
+[2025-05-29T13:30:59.730Z] [LOG] WebhookController {/webhook}:
+[2025-05-29T13:30:59.730Z] [LOG] Mapped {/webhook, GET} route
+[2025-05-29T13:30:59.731Z] [LOG] UserController {/users}:
+[2025-05-29T13:30:59.732Z] [LOG] Mapped {/users, POST} route
+[2025-05-29T13:30:59.732Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-29T13:30:59.733Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-29T13:30:59.734Z] [LOG] Mapped {/users, GET} route
+[2025-05-29T13:30:59.734Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-29T13:30:59.735Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-29T13:30:59.736Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-29T13:30:59.736Z] [LOG] RoleController {/roles}:
+[2025-05-29T13:30:59.737Z] [LOG] Mapped {/roles, POST} route
+[2025-05-29T13:30:59.737Z] [LOG] Mapped {/roles, GET} route
+[2025-05-29T13:30:59.738Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-29T13:30:59.739Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-29T13:30:59.739Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-29T13:30:59.739Z] [LOG] AuthController {/auth}:
+[2025-05-29T13:30:59.740Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-29T13:30:59.741Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-29T13:30:59.741Z] [LOG] StagaireController {/stagaires}:
+[2025-05-29T13:30:59.742Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-29T13:30:59.742Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-29T13:30:59.743Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-29T13:30:59.745Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-29T13:30:59.746Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-29T13:30:59.746Z] [LOG] DemandeController {/demandes}:
+[2025-05-29T13:30:59.747Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-29T13:30:59.748Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-29T13:30:59.748Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-29T13:30:59.749Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-29T13:30:59.749Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-29T13:30:59.750Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-29T13:30:59.751Z] [LOG] PresenceController {/presences}:
+[2025-05-29T13:30:59.751Z] [LOG] Mapped {/presences, POST} route
+[2025-05-29T13:30:59.752Z] [LOG] Mapped {/presences, GET} route
+[2025-05-29T13:30:59.752Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-29T13:30:59.753Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-29T13:30:59.753Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-29T13:30:59.754Z] [LOG] SupabaseController {/supabase}:
+[2025-05-29T13:30:59.754Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-29T13:30:59.757Z] [LOG] Nest application successfully started
+[2025-05-29T13:36:03.596Z] [LOG] PaymentController {/payments}:
+[2025-05-29T13:36:03.599Z] [LOG] Mapped {/payments/initiate, POST} route
+[2025-05-29T13:36:03.602Z] [LOG] Mapped {/payments/:paymentId, GET} route
+[2025-05-29T13:36:03.605Z] [LOG] WebhookController {/webhook}:
+[2025-05-29T13:36:03.606Z] [LOG] Mapped {/webhook, GET} route
+[2025-05-29T13:36:03.606Z] [LOG] UserController {/users}:
+[2025-05-29T13:36:03.607Z] [LOG] Mapped {/users, POST} route
+[2025-05-29T13:36:03.607Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-29T13:36:03.608Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-29T13:36:03.608Z] [LOG] Mapped {/users, GET} route
+[2025-05-29T13:36:03.609Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-29T13:36:03.609Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-29T13:36:03.610Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-29T13:36:03.610Z] [LOG] RoleController {/roles}:
+[2025-05-29T13:36:03.611Z] [LOG] Mapped {/roles, POST} route
+[2025-05-29T13:36:03.611Z] [LOG] Mapped {/roles, GET} route
+[2025-05-29T13:36:03.612Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-29T13:36:03.612Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-29T13:36:03.612Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-29T13:36:03.613Z] [LOG] AuthController {/auth}:
+[2025-05-29T13:36:03.613Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-29T13:36:03.614Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-29T13:36:03.614Z] [LOG] StagaireController {/stagaires}:
+[2025-05-29T13:36:03.615Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-29T13:36:03.615Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-29T13:36:03.615Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-29T13:36:03.616Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-29T13:36:03.616Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-29T13:36:03.619Z] [LOG] DemandeController {/demandes}:
+[2025-05-29T13:36:03.619Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-29T13:36:03.620Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-29T13:36:03.620Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-29T13:36:03.621Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-29T13:36:03.621Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-29T13:36:03.622Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-29T13:36:03.622Z] [LOG] PresenceController {/presences}:
+[2025-05-29T13:36:03.622Z] [LOG] Mapped {/presences, POST} route
+[2025-05-29T13:36:03.623Z] [LOG] Mapped {/presences, GET} route
+[2025-05-29T13:36:03.623Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-29T13:36:03.624Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-29T13:36:03.624Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-29T13:36:03.624Z] [LOG] SupabaseController {/supabase}:
+[2025-05-29T13:36:03.625Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-29T13:36:03.628Z] [LOG] Nest application successfully started
+[2025-05-29T15:19:10.853Z] [LOG] PaymentController {/payments}:
+[2025-05-29T15:19:10.856Z] [LOG] Mapped {/payments/initiate, POST} route
+[2025-05-29T15:19:10.858Z] [LOG] Mapped {/payments/:paymentId, GET} route
+[2025-05-29T15:19:10.859Z] [LOG] WebhookController {/webhook}:
+[2025-05-29T15:19:10.859Z] [LOG] Mapped {/webhook, GET} route
+[2025-05-29T15:19:10.860Z] [LOG] UserController {/users}:
+[2025-05-29T15:19:10.860Z] [LOG] Mapped {/users, POST} route
+[2025-05-29T15:19:10.861Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-29T15:19:10.861Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-29T15:19:10.862Z] [LOG] Mapped {/users, GET} route
+[2025-05-29T15:19:10.863Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-29T15:19:10.863Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-29T15:19:10.864Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-29T15:19:10.864Z] [LOG] RoleController {/roles}:
+[2025-05-29T15:19:10.865Z] [LOG] Mapped {/roles, POST} route
+[2025-05-29T15:19:10.865Z] [LOG] Mapped {/roles, GET} route
+[2025-05-29T15:19:10.866Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-29T15:19:10.866Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-29T15:19:10.866Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-29T15:19:10.867Z] [LOG] AuthController {/auth}:
+[2025-05-29T15:19:10.867Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-29T15:19:10.868Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-29T15:19:10.868Z] [LOG] StagaireController {/stagaires}:
+[2025-05-29T15:19:10.868Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-29T15:19:10.869Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-29T15:19:10.869Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-29T15:19:10.870Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-29T15:19:10.870Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-29T15:19:10.871Z] [LOG] DemandeController {/demandes}:
+[2025-05-29T15:19:10.871Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-29T15:19:10.872Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-29T15:19:10.872Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-29T15:19:10.872Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-29T15:19:10.875Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-29T15:19:10.876Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-29T15:19:10.877Z] [LOG] PresenceController {/presences}:
+[2025-05-29T15:19:10.877Z] [LOG] Mapped {/presences, POST} route
+[2025-05-29T15:19:10.877Z] [LOG] Mapped {/presences, GET} route
+[2025-05-29T15:19:10.878Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-29T15:19:10.879Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-29T15:19:10.879Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-29T15:19:10.880Z] [LOG] SupabaseController {/supabase}:
+[2025-05-29T15:19:10.880Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-29T15:19:10.883Z] [LOG] Nest application successfully started
+[2025-05-29T15:20:35.656Z] [LOG] PaymentController {/payments}:
+[2025-05-29T15:20:35.659Z] [LOG] Mapped {/payments/initiate, POST} route
+[2025-05-29T15:20:35.661Z] [LOG] Mapped {/payments/:paymentId, GET} route
+[2025-05-29T15:20:35.662Z] [LOG] WebhookController {/webhook}:
+[2025-05-29T15:20:35.662Z] [LOG] Mapped {/webhook, GET} route
+[2025-05-29T15:20:35.663Z] [LOG] UserController {/users}:
+[2025-05-29T15:20:35.663Z] [LOG] Mapped {/users, POST} route
+[2025-05-29T15:20:35.664Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-29T15:20:35.664Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-29T15:20:35.665Z] [LOG] Mapped {/users, GET} route
+[2025-05-29T15:20:35.665Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-29T15:20:35.666Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-29T15:20:35.667Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-29T15:20:35.667Z] [LOG] RoleController {/roles}:
+[2025-05-29T15:20:35.668Z] [LOG] Mapped {/roles, POST} route
+[2025-05-29T15:20:35.668Z] [LOG] Mapped {/roles, GET} route
+[2025-05-29T15:20:35.668Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-29T15:20:35.669Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-29T15:20:35.669Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-29T15:20:35.670Z] [LOG] AuthController {/auth}:
+[2025-05-29T15:20:35.671Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-29T15:20:35.671Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-29T15:20:35.672Z] [LOG] StagaireController {/stagaires}:
+[2025-05-29T15:20:35.672Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-29T15:20:35.672Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-29T15:20:35.673Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-29T15:20:35.673Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-29T15:20:35.674Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-29T15:20:35.674Z] [LOG] DemandeController {/demandes}:
+[2025-05-29T15:20:35.674Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-29T15:20:35.677Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-29T15:20:35.678Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-29T15:20:35.678Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-29T15:20:35.679Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-29T15:20:35.679Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-29T15:20:35.680Z] [LOG] PresenceController {/presences}:
+[2025-05-29T15:20:35.680Z] [LOG] Mapped {/presences, POST} route
+[2025-05-29T15:20:35.681Z] [LOG] Mapped {/presences, GET} route
+[2025-05-29T15:20:35.681Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-29T15:20:35.682Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-29T15:20:35.682Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-29T15:20:35.682Z] [LOG] SupabaseController {/supabase}:
+[2025-05-29T15:20:35.683Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-29T15:20:35.687Z] [LOG] Nest application successfully started
+[2025-05-29T15:25:33.255Z] [LOG] [object Object]
+[2025-05-29T15:25:33.328Z] [LOG] 68344763e902863b94186920
+[2025-05-29T15:26:31.812Z] [LOG] [object Object]
+[2025-05-29T15:26:31.865Z] [LOG] 68344763e902863b94186920
+[2025-05-29T16:11:08.396Z] [LOG] PaymentController {/payments}:
+[2025-05-29T16:11:08.400Z] [LOG] Mapped {/payments/initiate, POST} route
+[2025-05-29T16:11:08.401Z] [LOG] Mapped {/payments/:paymentId, GET} route
+[2025-05-29T16:11:08.401Z] [LOG] WebhookController {/webhook}:
+[2025-05-29T16:11:08.402Z] [LOG] Mapped {/webhook, GET} route
+[2025-05-29T16:11:08.402Z] [LOG] UserController {/users}:
+[2025-05-29T16:11:08.403Z] [LOG] Mapped {/users, POST} route
+[2025-05-29T16:11:08.403Z] [LOG] Mapped {/users/reset-password, POST} route
+[2025-05-29T16:11:08.404Z] [LOG] Mapped {/users/signup, POST} route
+[2025-05-29T16:11:08.404Z] [LOG] Mapped {/users, GET} route
+[2025-05-29T16:11:08.405Z] [LOG] Mapped {/users/:id, GET} route
+[2025-05-29T16:11:08.406Z] [LOG] Mapped {/users/:id, PUT} route
+[2025-05-29T16:11:08.406Z] [LOG] Mapped {/users/:id, DELETE} route
+[2025-05-29T16:11:08.407Z] [LOG] RoleController {/roles}:
+[2025-05-29T16:11:08.407Z] [LOG] Mapped {/roles, POST} route
+[2025-05-29T16:11:08.408Z] [LOG] Mapped {/roles, GET} route
+[2025-05-29T16:11:08.408Z] [LOG] Mapped {/roles/:id, GET} route
+[2025-05-29T16:11:08.408Z] [LOG] Mapped {/roles/:id, PUT} route
+[2025-05-29T16:11:08.409Z] [LOG] Mapped {/roles/:id, DELETE} route
+[2025-05-29T16:11:08.409Z] [LOG] AuthController {/auth}:
+[2025-05-29T16:11:08.410Z] [LOG] Mapped {/auth/login, POST} route
+[2025-05-29T16:11:08.410Z] [LOG] Mapped {/auth/profile, GET} route
+[2025-05-29T16:11:08.410Z] [LOG] StagaireController {/stagaires}:
+[2025-05-29T16:11:08.411Z] [LOG] Mapped {/stagaires, POST} route
+[2025-05-29T16:11:08.411Z] [LOG] Mapped {/stagaires, GET} route
+[2025-05-29T16:11:08.411Z] [LOG] Mapped {/stagaires/:id, GET} route
+[2025-05-29T16:11:08.412Z] [LOG] Mapped {/stagaires/:id, PUT} route
+[2025-05-29T16:11:08.412Z] [LOG] Mapped {/stagaires/:id, DELETE} route
+[2025-05-29T16:11:08.412Z] [LOG] DemandeController {/demandes}:
+[2025-05-29T16:11:08.413Z] [LOG] Mapped {/demandes, POST} route
+[2025-05-29T16:11:08.413Z] [LOG] Mapped {/demandes, GET} route
+[2025-05-29T16:11:08.414Z] [LOG] Mapped {/demandes/:id, GET} route
+[2025-05-29T16:11:08.414Z] [LOG] Mapped {/demandes/:id, PUT} route
+[2025-05-29T16:11:08.418Z] [LOG] Mapped {/demandes/:id/status, PATCH} route
+[2025-05-29T16:11:08.418Z] [LOG] Mapped {/demandes/:id, DELETE} route
+[2025-05-29T16:11:08.419Z] [LOG] PresenceController {/presences}:
+[2025-05-29T16:11:08.419Z] [LOG] Mapped {/presences, POST} route
+[2025-05-29T16:11:08.420Z] [LOG] Mapped {/presences, GET} route
+[2025-05-29T16:11:08.420Z] [LOG] Mapped {/presences/:id, GET} route
+[2025-05-29T16:11:08.420Z] [LOG] Mapped {/presences/:id, PUT} route
+[2025-05-29T16:11:08.421Z] [LOG] Mapped {/presences/:id, DELETE} route
+[2025-05-29T16:11:08.421Z] [LOG] SupabaseController {/supabase}:
+[2025-05-29T16:11:08.422Z] [LOG] Mapped {/supabase/upload, POST} route
+[2025-05-29T16:11:08.424Z] [LOG] Nest application successfully started
+[2025-05-29T16:15:24.661Z] [LOG] [object Object]
+[2025-05-29T16:15:24.721Z] [LOG] 68344763e902863b94186920
